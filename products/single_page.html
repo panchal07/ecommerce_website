@@ -1,0 +1,91 @@
+{% extends 'layout.html'%}
+{% block content%}
+
+<div class="">
+  <nav class="navbar navbar-expand-lg bh-white">
+    <a class="navbar-brand pl-5" href="#">Stop & Shop </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="About_us.html">About_us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pr-5" href="#">New Arrival</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link pr-5" href="#">Cart</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link pr-5" href="index.html#newsec">Category</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6" id="b_image">
+      <img src="{{url_for('static',filename='images/' +product.image_1)}}" alt="{{product.name}}" width="400" height="400">
+      <hr>
+    </div>
+    <div class="col-md-6">
+      <h4>Product Name: {{product.name}} </h4>
+      <hr>
+      {% if product.discount > 0%}
+      <p>Product Price: ${{product.price}}</p>
+      {% endif %}
+      <b>Product Description</b>
+      <p>{{product.discription}}</p>
+      <hr>
+      <form class="" action="{{url_for('AddCart')}}" method="post">
+        <input type="hidden" name="product_id" value="{{product.id}}">
+        <!-- <button type="submit" name="button" class="btn btn-sm btn-warning"></button> -->
+        <label for="">Quantity</label>
+        {% set colors = product.colors.split(',')%}
+        <input type="number" name="quantity" value="1" min="1" max={{product.stock}}>
+
+        <select name="colors" id="colors">
+            {% for color in colors %}
+            {% set col = color.split(':') %}
+            <option value="{{col[0]}}">{{col[0]|capitalize }}</option>
+            {% endfor %}
+        </select>
+      </form>
+      <a href="#" class="btn btn-warning">Add to cart</a>
+
+    </div>
+    <div class="row">
+      <div class="col-md-12 mt-3" id="d_images">
+        <img src="{{url_for('static',filename='images/'+product.image_1)}}" alt="{{product.name}}" width="120 height="120 class="p-3">
+        <img src="{{url_for('static',filename='images/'+product.image_2)}}" alt="{{product.name}}" width="120 height="120 class="p-3">
+        <img src="{{url_for('static',filename='images/'+product.image_3)}}" alt="{{product.name}}" width="120 height="120 class="p-3">
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript">
+  var b_image = document.getElementById('b_image');
+  var d_image = document.getElementById('d_images').getElementsByTagName('img');
+  for(var i=0; i<d_image.length; i++){
+    d_image[i].addEventListener('click', full_image);
+  }
+
+  function full_image(){
+    var ImageSRC = this.getAttribute('src')
+    b_image.innerHTML="<img src=" + ImageSRC + " width='400' height='400'>";
+  }
+
+
+
+</script>
+{% endblock content %}

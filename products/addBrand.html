@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    {% if brands %}
+    <div class="col-md-6">
+      {% include "_msgprompt.html"%}
+      <h1 class="text-center mt-5">Add a brand</h1>
+      <form class="" action="" method="post">
+        <input type="text" name="brand" value="" class="form-control">
+        <input type="submit" value="Add Brand" class="btn btn-info mt-2">
+      </form>
+      {% else %}
+      <div class="col-md-6">
+        {% include '_msgprompt.html' %}
+        <h1 class="text-center mt-5">Add a category</h1>
+        <form class="" action="" method="post">
+          <input type="text" name="category" value="" class="form-control">
+          <input type="submit" name="" value="Add Category" class="btn btn-info mt-2">
+        </form>
+        {% endif %}
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
+
+{% endblock content %}

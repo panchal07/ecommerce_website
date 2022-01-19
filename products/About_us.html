@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Aboutus</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bh-white">
+    <a class="navbar-brand pl-5" href="{{url_for('home')}}">Stop & Shop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{{url_for('home')}}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pr-5" href="{{url_for('men')}}">New Arrivals</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link pr-5" href="{{url_for('women')}}">Category</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 30.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #F08080;
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  color : black;
+
+}
+
+.container {
+  padding: 0 16px;
+  align: center;
+
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 90%;
+    display: block;
+  }
+}
+</style>
+<body>
+
+<!-- <div class="about-section">
+  <p>About Us Page.</p>
+  <p>Don't be into trends. Don't make fashion own you, but you decide what you are, what you want to express by the way you dress and the way to live</p>
+</div> -->
+
+<h2 style="text-align:center">Our Team of Two</h2>
+<!-- <div class="row" >
+
+<div class="details" >
+  <div class="col-md-3"></div>
+  <div class="col-md-3"></div>
+  <div class="column">
+    <div class="card">
+      <img  class="center" src="static/images/saylee1.jfif" alt="Saylee Raut" style="width:100%" width="550" height="550">
+      <div class="container">
+        <h2>Saylee Raut</h2>
+        <p>Master's in Computer Science</p>
+
+        <p>I believe that my biggest strength is that, I face challenges head on which has been instrumental in boosting my self confidence.</p>
+        <p>saylee30@uab.edu</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img class="center" src="static/images/sagar.jfif" alt="sagar" style="width:100%" width="550" height="550">
+      <div class="container">
+        <h2>Sagar Panchal</h2>
+        <p>Master's in Computer Science</p>
+        <p>Don't be into trends. Don't make fashion own you, but you decide what you are, what you want to express by the way you dress and the way to live</p>
+        <p>sagarp95@uab.edu</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div> -->
+<section class="aboutme">
+  <div class="section">
+    <div class="container">
+      <div class="content-section">
+        <div class="title">
+          <h1><b>Saylee Raut</b></h1>
+        </div>
+        <div class="content">
+          <h3> <b>FRONTEND DEVELOPER </b></h3>
+          <p>Saylee Raut is our Frontend developer at Stop&Shop.She has worked on the front-end part of our project. She created the Web pages of Stop& Shop.She also worked on the add to cart functionality of our website.</p>
+          <p><b>Email Contact: </b>saylee30@uab.edu</p>
+        </div>
+      <div class="social">
+        <a href="https://www.facebook.com/sagar.panchal.50/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/SagarPanchal89"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/sagar-panchal-502618b4/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/panchal07"><i class="fab fa-github"></i></a>
+      </div>
+      </div>
+  <div class="image-section">
+    <img src="/static/images/saylee1.jfif" alt="">
+    <!-- <img src="img/profile.jpg" alt=""> -->
+  </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="aboutme" height="100">
+  <div class="section">
+    <div class="container">
+      <div class="content-section">
+        <div class="title">
+          <h1><b>Sagar Panchal</b></h1>
+        </div>
+        <div class="content">
+          <h3><b> BACKEND DEVELOPER</b> </h3>
+          <p>Sagar Panchal is our Backend Developer at Stop&Shop website. He created the Admin side where admin can add products, brands and categories and perform CRUD Operations.He also worked on creating the necessary database tables as per requirement.</p>
+
+          <p><b>Email Contact:</b> sagarp95@uab.edu</p>
+
+        </div>
+      <div class="social">
+        <a href="https://www.facebook.com/sagar.panchal.50/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/SagarPanchal89"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/sagar-panchal-502618b4/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/panchal07"><i class="fab fa-github"></i></a>
+      </div>
+      </div>
+  <div class="image-section">
+    <img src="static/images/sagar1.jfif" alt="">
+    <!-- <img src="img/profile.jpg" alt=""> -->
+  </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="footer py-5">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-9 m-auto text-center">
+        <h1> Collaborate with us and showcase your ideas </h1>
+        <input type="text" class="px-3" placeholder="Enter your Email-id">
+        <button class="btn2"> Submit</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-11">
+        <div class="row">
+          <div class="row">
+
+            <div class="col-lg-3  py-3">
+              <h5 class="pb-3"> Get To Know Us </h5>
+              <p> About Us </p>
+              <p> Help </p>
+              <p> Contact Us </p>
+            </div>
+
+            <div class="col-lg-3 py-3">
+              <h5 class="pb-3"> FAQ </h5>
+              <p> Track Your Order </p>
+              <p> Got Questions? </p>
+              <p> Gift Card </p>
+            </div>
+
+            <div class="col-lg-3  py-3">
+              <h5 class="pb-3"> Service </h5>
+              <p> Return </p>
+              <p> Buy </p>
+              <p> Exchange </p>
+            </div>
+            <div class="col-lg-3  py-3">
+              <h5 class="pb-3"> Social Media </h5>
+              <span><i class="fab fa-facebook"></i></span>
+              <span><i class="fab fa-linkedin-in"></i></span>
+              <span><i class="fab fa-instagram"></i></span>
+              <span><i class="fab fa-twitter"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center"> Copyright ©2021 All rights are reserved | This is user friendly website</p>
+    </div>
+
+
+
+
+  </div>
+</section>
+
+</body>
+</html>
